@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ===========================
+   CSS Variables (Theme)
+   Light mode is default here.
+   Dark mode class + values come when we build that feature.
+=========================== */
+
+:root {
+    --primary-bg-color: rgb(255, 255, 255);
+    --primary-bg-color-alt: rgb(20, 20, 20);
+    --primary-text-color: rgb(0, 0, 0);
+    --primary-text-color-alt: rgb(255, 255, 255);
+    --color-border: #eff3f4;
+    --secondary-text-color: #536471;
+    --color-accent-primary: #1d9bf0;
+    --color-accent-hover: #000000dd;
+    
+    
+    --sidebar-left-width: 275px;
+    --sidebar-right-width: 350px;
+    --max-content-width: 990px;
+}
+
+
+* {
+    font-family: 'Geist', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+}
+
+/* ===========================
+    BASE GRID LAYOUT
+    =========================== */
+    
+.app-grid {
+    display: grid;
+    grid-template-columns: minmax(88px, var(--sidebar-left-width)) minmax(0, 1fr) minmax(0, var(--sidebar-right-width));
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* ----- Left Sidebar ----- */
+
+.left-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px;
+    border-right: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.nav-logo {
+    font-size: 30px;
+    padding: 8px 12px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+   
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-radius: 9999px;
+    font-size: 20px;
+    transition: background-color 0.2s ease;
+}
+   
+.nav-link:hover {
+    background-color: var(--color-accent-hover);
+}
+   
+.nav-link.active {
+    font-weight: 700;
+}
+   
+.nav-icon {
+    font-size: 22px;
+}
+   
+.tweet-button {
+    margin-top: 8px;
+    padding: 14px;
+    background-color: var(--primary-bg-color-alt);
+    color: var(--primary-text-color-alt);
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 9999px;
+}
+   
+.tweet-button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.dark-mode-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+}
+
+.dark-mode-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.dark-mode-switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 40px;
+    background-color: var(--secondary-text-color);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.dark-mode-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    transition: .4s;
+    transform: translateX(0);
+}
+
+.dark-mode-switch input:checked + .slider {
+    background-color: var(--primary-bg-color-alt);
+}
+.dark-mode-switch input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+.user-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 9999px;
+}
+
+.user-mini-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.user-mini-avatar img {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 42px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.15);
+}
+   
+.user-mini:hover {
+background-color: var(--secondary-text-color);
+}
+
+.user-mini-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    flex-grow: 1;
+}
+
+.user-mini-name {
+    font-weight: 700;
+}
+
+.user-mini-username {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+   
+  
