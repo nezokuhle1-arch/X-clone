@@ -1,5 +1,10 @@
-const darkModeToggle = document.querySelector('.dark-mode-switch input');
+const LOGIN_KEY = 'fakeTwitterLoggedIn';
 
+if (localStorage.getItem(LOGIN_KEY) !== 'true') {
+    window.location.replace('login.html');
+}
+
+const darkModeToggle = document.querySelector('.dark-mode-switch input');
 // Check if user already chose dark mode on a previous visit
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');

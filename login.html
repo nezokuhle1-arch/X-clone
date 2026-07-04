@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in — FakeTwitter</title>
+    <title>Sign in — Fake X</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
-    <link href="https://db.onlinewebfonts.com/c/2bf40ab72ea4897a3fd9b6e48b233a19?family=Garamond" rel="stylesheet">
     <script src="login.js" defer></script>
 </head>
 <body class="login-page-body">
@@ -20,56 +19,30 @@
     <!-- Layer 1: dark gradient so text and card stay readable -->
     <div class="login-overlay" aria-hidden="true"></div>
 
-    <!-- Layer 2: top navigation -->
+    <!-- Top bar: brand only -->
     <header class="login-nav">
-        <a href="index.html" class="login-nav-brand" aria-label="Back to FakeTwitter home">FakeTwitter</a>
-
-        <nav class="login-nav-links" aria-label="Main navigation">
-            <a href="#">Wander</a>
-            <a href="#">Archive</a>
-            <a href="#">Story</a>
-            <a href="#">Connect</a>
-        </nav>
-
-        <button class="login-nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-            <span class="material-symbols-rounded login-nav-toggle-icon login-nav-toggle-open">menu</span>
-            <span class="material-symbols-rounded login-nav-toggle-icon login-nav-toggle-close">close</span>
-        </button>
+        <span class="login-nav-brand">Fake X</span>
     </header>
-
-    <!-- Mobile dropdown menu (hidden on desktop) -->
-    <nav class="mobile-menu mobile-menu-glass" id="mobileMenu" aria-hidden="true">
-        <a href="#">Wander</a>
-        <a href="#">Archive</a>
-        <a href="#">Story</a>
-        <a href="#">Connect</a>
-        <a href="index.html" class="mobile-menu-home">Back to Home</a>
-    </nav>
 
   <main class="login-main">
 
-        <!-- Layer 3: cinematic hero copy -->
         <section class="login-hero" aria-label="Welcome">
-            <h1 class="login-hero-heading font-garamond">
-                <span class="staggered-fade" data-text="WITNESS THE">WITNESS THE</span>
-                <span class="staggered-fade" data-text="HIDDEN REALM">HIDDEN REALM</span>
+            <h1 class="login-hero-heading">
+                <span class="staggered-fade" data-text="See what's">See what's</span>
+                <span class="staggered-fade" data-text="happening now">happening now</span>
             </h1>
 
             <p class="login-hero-subtitle login-fade-in" style="animation-delay: 1.6s;">
-                An odyssey through delicate living forms,<br class="login-hero-br">
-                revealed by lens and curiosity.
+                Join the conversation.<br class="login-hero-br">
+                Follow trends, share your thoughts, and see what people are talking about.
             </p>
         </section>
 
-        <!-- Layer 4: sign-in card -->
+        <!-- Sign-in card -->
         <section class="login-card login-card-glass login-fade-in" style="animation-delay: 2s;" aria-label="Sign in">
-            <a href="index.html" class="login-back-btn" aria-label="Back to home">
-                <span class="material-symbols-rounded">arrow_back</span>
-            </a>
-
             <img src="assets/x-logo.svg" alt="" class="login-logo" width="32" height="32">
 
-            <h2 class="login-heading">Sign in to FakeTwitter</h2>
+            <h2 class="login-heading">Sign in to Fake X</h2>
 
             <form class="login-form" id="loginForm" novalidate>
                 <div class="form-group" id="usernameGroup">
