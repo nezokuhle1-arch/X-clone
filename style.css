@@ -22,6 +22,15 @@
     --max-content-width: 990px;
 }
 
+body.dark-mode {
+    --primary-bg-color: rgb(0, 0, 0);
+    --primary-bg-color-alt: rgb(255, 255, 255);
+    --primary-text-color: rgb(255, 255, 255);
+    --primary-text-color-alt: rgb(0, 0, 0);
+    --color-border: rgb(47, 51, 54);
+    --secondary-text-color: rgb(113, 118, 123);
+}
+
 
 * {
     font-family: 'Geist', sans-serif;
@@ -221,6 +230,115 @@ background-color: var(--secondary-text-color);
     color: var(--secondary-text-color);
 }
 
+/* ===========================
+    RIGHT SIDEBAR
+    =========================== */
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--secondary-text-color);
+    font-size: 18px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border-radius: 9999px;
+    border: none;
+    background-color: var(--color-border);
+    font-size: 15px;
+    color: var(--primary-text-color);
+    outline: none;
+}
+
+.widget {
+    background-color: var(--color-bg-alt, var(--color-border));
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.widget h3 {
+    padding: 16px 16px 8px;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.trend-item,
+.follow-item {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    transition: background-color 0.2s ease;
+}
+
+.trend-item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+.trend-category,
+.follow-handle {
+    font-size: 13px;
+    color: var(--secondary-text-color);
+}
+
+.trend-name {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.trend-count {
+    font-size: 13px;
+    color: var(--secondary-text-color);
+}
+
+.follow-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.follow-avatar {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.follow-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.follow-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.follow-name {
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.follow-btn {
+    padding: 6px 16px;
+    background-color: var(--primary-text-color);
+    color: var(--primary-bg-color);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
 
 /* ===========================
     TIMELINE PAGE
