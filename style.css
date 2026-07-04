@@ -353,6 +353,19 @@ background-color: var(--secondary-text-color);
 }
 
 /* ===========================
+    LOGOUT BUTTON
+    =========================== */
+
+.logout-btn {
+    margin-left: auto;
+    color: var(--secondary-text-color);
+}
+
+.logout-btn:hover {
+    color: var(--color-accent-primary);
+}
+
+/* ===========================
     TIMELINE PAGE
     =========================== */
 
