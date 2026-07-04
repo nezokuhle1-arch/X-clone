@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notifications — Fake X</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="assets/favicon.png">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+        <script src="app.js" defer></script>
+    </head>
+
+    <body>
+
+        <div class="app-grid">
+
+            <!-- LEFT SIDEBAR -->
+            <aside class="left-sidebar" id="sidebar">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/x-logo.svg" alt="Fake-X">
+                </a>
+
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">
+                        <span class="material-symbols-rounded">home</span>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">search</span>
+                        <span>Explore</span>
+                    </a>
+                    <a href="notifications.html" class="nav-link active">
+                        <span class="material-symbols-rounded">notifications</span>
+                        <span>Notifications</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">chat_bubble</span>
+                        <span>Chat</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">robot_2</span>
+                        <span>Grok</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">check_circle</span>
+                        <span>Premium</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">person</span>
+                        <span>Profile</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <span class="material-symbols-rounded">more_horiz</span>
+                        <span>More</span>
+                    </a>
+                </nav>
+
+                <button class="tweet-button" id="tweetButton">Post</button>
+
+                <label class="dark-mode-switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+                <div class="user-mini">
+                    <div class="user-mini-avatar">
+                        <img src="assets/profile-picture.jpg" alt="Profile picture">
+                    </div>
+                    <div class="user-mini-info">
+                        <span class="user-mini-name">Nezokuhle Tshukulwana</span>
+                        <span class="user-mini-username">@NezokuhleT</span>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- NOTIFICATIONS PAGE -->
+            <main class="timeline-page">
+
+                <header class="notifications-page-header">
+                    <h1>Notifications</h1>
+                </header>
+
+                <header class="tab-bar">
+                    <a href="#" class="tab-bar-item active">
+                        <span>All</span>
+                    </a>
+                    <a href="#" class="tab-bar-item">
+                        <span>Verified</span>
+                    </a>
+                    <a href="#" class="tab-bar-item">
+                        <span>Mentions</span>
+                    </a>
+                </header>
+
+                <section class="notifications-list" aria-label="Notifications">
+
+                    <article class="notification">
+                        <div class="notification-icon notification-icon--like" aria-hidden="true">
+                            <span class="material-symbols-rounded">favorite</span>
+                        </div>
+                        <div class="notification-avatar">
+                            <img src="assets/account_2.jpg" alt="Layla Hart">
+                        </div>
+                        <div class="notification-body">
+                            <p class="notification-text"><strong>Layla Hart</strong> liked your post</p>
+                            <span class="notification-time">2h</span>
+                            <p class="notification-preview">Building in public has been the best decision I've made this year.</p>
+                        </div>
+                    </article>
+
+                    <article class="notification">
+                        <div class="notification-icon notification-icon--retweet" aria-hidden="true">
+                            <span class="material-symbols-rounded">repeat</span>
+                        </div>
+                        <div class="notification-avatar">
+                            <img src="assets/account_1.jpg" alt="Dawson Kade">
+                        </div>
+                        <div class="notification-body">
+                            <p class="notification-text"><strong>Dawson Kade</strong> reposted your post</p>
+                            <span class="notification-time">4h</span>
+                            <p class="notification-preview">Nothing feels better than looking back at the version of you that almost gave up, and realizing you didn't.</p>
+                        </div>
+                    </article>
+
+                    <article class="notification">
+                        <div class="notification-icon notification-icon--reply" aria-hidden="true">
+                            <span class="material-symbols-rounded">chat_bubble</span>
+                        </div>
+                        <div class="notification-avatar">
+                            <img src="assets/account_3.jpg" alt="Axel Ramos">
+                        </div>
+                        <div class="notification-body">
+                            <p class="notification-text"><strong>Axel Ramos</strong> replied to your post</p>
+                            <span class="notification-time">6h</span>
+                            <p class="notification-preview">This is so true — discipline really is the whole game.</p>
+                        </div>
+                    </article>
+
+                    <article class="notification">
+                        <div class="notification-icon notification-icon--follow" aria-hidden="true">
+                            <span class="material-symbols-rounded">person_add</span>
+                        </div>
+                        <div class="notification-avatar">
+                            <img src="assets/account_3.jpg" alt="Axel Ramos">
+                        </div>
+                        <div class="notification-body">
+                            <p class="notification-text"><strong>Axel Ramos</strong> started following you</p>
+                            <span class="notification-time">1d</span>
+                        </div>
+                    </article>
+
+                    <article class="notification">
+                        <div class="notification-icon notification-icon--like" aria-hidden="true">
+                            <span class="material-symbols-rounded">favorite</span>
+                        </div>
+                        <div class="notification-avatar">
+                            <img src="assets/account_1.jpg" alt="Dawson Kade">
+                        </div>
+                        <div class="notification-body">
+                            <p class="notification-text"><strong>Dawson Kade</strong> liked your post</p>
+                            <span class="notification-time">1d</span>
+                            <p class="notification-preview">Shipped my first feature today. Small win, but it counts.</p>
+                        </div>
+                    </article>
+
+                    <article class="notification">
+                        <div class="notification-icon notification-icon--follow" aria-hidden="true">
+                            <span class="material-symbols-rounded">person_add</span>
+                        </div>
+                        <div class="notification-avatar">
+                            <img src="assets/account_2.jpg" alt="Layla Hart">
+                        </div>
+                        <div class="notification-body">
+                            <p class="notification-text"><strong>Layla Hart</strong> started following you</p>
+                            <span class="notification-time">2d</span>
+                        </div>
+                    </article>
+
+                </section>
+
+            </main>
+
+            <!-- RIGHT SIDEBAR -->
+            <aside class="sidebar-right">
+                <div class="search-box">
+                    <span class="material-symbols-rounded search-icon">search</span>
+                    <input type="text" placeholder="Search FakeTwitter">
+                </div>
+
+                <div class="widget">
+                    <h3>Trends for you</h3>
+                    <div class="trend-item">
+                        <span class="trend-category">Trending in South Africa</span>
+                        <span class="trend-name">#FakeTwitter</span>
+                        <span class="trend-count">12.4K posts</span>
+                    </div>
+                    <div class="trend-item">
+                        <span class="trend-category">Technology · Trending</span>
+                        <span class="trend-name">#BuildInPublic</span>
+                        <span class="trend-count">8,201 posts</span>
+                    </div>
+                    <div class="trend-item">
+                        <span class="trend-category">Trending</span>
+                        <span class="trend-name">#Zaio</span>
+                        <span class="trend-count">3,014 posts</span>
+                    </div>
+                </div>
+
+                <div class="widget">
+                    <h3>Who to follow</h3>
+                    <div class="follow-item">
+                        <div class="follow-avatar">
+                            <img src="assets/account_2.jpg" alt="Layla Hart">
+                        </div>
+                        <div class="follow-info">
+                            <span class="follow-name">Layla Hart</span>
+                            <span class="follow-handle">@LaylaHart</span>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                    <div class="follow-item">
+                        <div class="follow-avatar">
+                            <img src="assets/account_3.jpg" alt="Axel Ramos">
+                        </div>
+                        <div class="follow-info">
+                            <span class="follow-name">Axel Ramos</span>
+                            <span class="follow-handle">@AxelRamos</span>
+                        </div>
+                        <button class="follow-btn">Follow</button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+    </body>
+</html>
