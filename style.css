@@ -108,7 +108,7 @@ button {
 }
    
 .nav-link:hover {
-    background-color: var(--color-accent-hover);
+    background-color: var(--secondary-text-color);
 }
    
 .nav-link.active {
@@ -221,5 +221,49 @@ background-color: var(--secondary-text-color);
     color: var(--secondary-text-color);
 }
 
-   
-  
+
+/* ===========================
+    TIMELINE PAGE
+    =========================== */
+
+.timeline-page {
+    padding: 12px 0;
+    border-right: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+}
+.tab-bar {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.tab-bar-item {
+    position: relative; /* needs this ::after underline can be positioned relative to this element */
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.tab-bar-item:hover {
+    background-color: var(--secondary-text-color);
+}
+
+.tab-bar-item.active {
+    font-weight: 700;
+    color: var(--color-accent-primary);
+}
+
+.tab-bar-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 4px;
+    border-radius: 9999px;
+    background-color: var(--color-accent-primary);
+}
