@@ -74,6 +74,7 @@
 
             </aside>
 
+            <!-- TIMELINE PAGE -->
             <main class="timeline-page">
                 <header class="tab-bar">
                     <a href="#" class="tab-bar-item active">
@@ -90,7 +91,39 @@
                     </a>
                 </header>
 
+                <!-- COMPOSE BOX -->
+                <div class="compose-box">
+                    <div class="compose-avatar">
+                        <img src="assets/profile-picture.jpg" alt="Profile picture">
+                    </div>
                 
+                    <div class="compose-body">
+                        <textarea class="compose-input" placeholder="What's happening?" maxlength="280"></textarea>
+                
+                        <div class="compose-toolbar">
+                            <div class="compose-icons">
+                                <button class="compose-icon-btn" aria-label="Add image">
+                                    <span class="material-symbols-rounded">image</span>
+                                </button>
+                                <button class="compose-icon-btn" aria-label="Add GIF">
+                                    <span class="material-symbols-rounded">gif_box</span>
+                                </button>
+                                <button class="compose-icon-btn" aria-label="Add poll">
+                                    <span class="material-symbols-rounded">poll</span>
+                                </button>
+                                <button class="compose-icon-btn" aria-label="Add emoji">
+                                    <span class="material-symbols-rounded">mood</span>
+                                </button>
+                                <button class="compose-icon-btn" aria-label="Add schedule">
+                                    <span class="material-symbols-rounded">calendar_clock</span>
+                                </button>
+                            </div>
+                
+                            <button class="compose-post-btn" id="composePostBtn">Post</button>
+                        </div>
+                    </div>
+                </div> 
+
             </main>
         </div>
 
