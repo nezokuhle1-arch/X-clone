@@ -97,8 +97,19 @@ button {
 }
 
 .nav-logo {
-    font-size: 30px;
+    display: inline-flex;
+    align-items: center;
     padding: 8px 12px;
+}
+
+.nav-logo img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+body.dark-mode .nav-logo img {
+    filter: invert(1);
 }
 
 .nav-links {
@@ -792,8 +803,8 @@ body.login-page-body {
 
 .login-logo {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     margin: 0 auto 1rem;
     filter: invert(1);
 }
