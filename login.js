@@ -54,3 +54,38 @@ document.addEventListener('DOMContentLoaded', () => {
     initStaggeredFade();
     initLoginForm();
 });
+
+function initLoginForm() {
+    const form = document.getElementById('loginForm');
+    if (!form) return;
+
+    const usernameGroup = document.getElementById('usernameGroup');
+    const passwordGroup = document.getElementById('passwordGroup');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let hasError = false;
+
+        if (usernameInput.value.trim() === '') {
+            usernameGroup.classList.add('has-error');
+            hasError = true;
+        } else {
+            usernameGroup.classList.remove('has-error');
+        }
+
+        if (passwordInput.value.trim() === '') {
+            passwordGroup.classList.add('has-error');
+            hasError = true;
+        } else {
+            passwordGroup.classList.remove('has-error');
+        }
+
+        if (hasError) return;
+
+        localStorage.setItem(LOGIN_KEY, 'true');
+        window.location.href = 'index.html';
+    });
+}
