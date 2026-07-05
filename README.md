@@ -78,6 +78,7 @@ Deployed on Netlify. Since this is a plain HTML/CSS/JS project with no build ste
 
 **Link:**
 - https://fake-xwitter.netlify.app/login.html 
+- Video: https://www.loom.com/share/b2ce142003c64dfdb27760a958bdaf9c
 
 ## Author
 
