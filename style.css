@@ -186,14 +186,15 @@ body.dark-mode .nav-logo img {
     width: 28px;
     left: 2px;
     bottom: 2px;
-    background-color: var(--primary-bg-color);
+    background-color: #ffffff;
     border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     transition: .4s;
     transform: translateX(0);
 }
 
 .dark-mode-switch input:checked + .slider {
-    background-color: var(--primary-bg-color-alt);
+    background-color: var(--color-accent-primary);
 }
 .dark-mode-switch input:checked + .slider:before {
     transform: translateX(28px);
