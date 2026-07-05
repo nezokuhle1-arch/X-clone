@@ -1079,3 +1079,185 @@ body.login-page-body {
     border-left: 2px solid var(--color-border);
     line-height: 1.4;
 }
+
+/* ===========================
+   RESPONSIVE — TABLET & MOBILE
+
+   Breakpoints (applies to the .app-grid shell used by
+   index.html and notifications.html):
+     max-width: 1024px  → drop the right sidebar (search/trends/follow)
+     max-width: 768px   → left sidebar shrinks to an icon-only rail
+     max-width: 600px   → left sidebar becomes a fixed bottom nav bar
+     max-width: 480px   → small-phone spacing tweaks
+=========================== */
+
+@media (max-width: 1024px) {
+    .app-grid {
+        grid-template-columns: minmax(88px, var(--sidebar-left-width)) minmax(0, 1fr);
+    }
+
+    .sidebar-right {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-grid {
+        grid-template-columns: 88px minmax(0, 1fr);
+    }
+
+    .left-sidebar {
+        padding: 12px 8px;
+        align-items: center;
+    }
+
+    .nav-logo {
+        padding: 8px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        gap: 0;
+    }
+
+    /* Hide the text label span, keep only the icon span */
+    .nav-link span:not(.material-symbols-rounded) {
+        display: none;
+    }
+
+    .tweet-button {
+        padding: 12px 4px;
+        font-size: 13px;
+    }
+
+    .user-mini {
+        justify-content: center;
+        padding: 8px;
+    }
+
+    .user-mini-info {
+        display: none;
+    }
+
+    /* Collapse "Log out" text but keep the icon visible */
+    .logout-btn {
+        font-size: 0;
+        gap: 0;
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    .logout-btn .material-symbols-rounded {
+        font-size: 22px;
+    }
+
+    .tab-bar-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-page {
+        border-left: none;
+        border-right: none;
+        padding-bottom: 72px; /* clears the fixed bottom nav below */
+    }
+
+    /* Left sidebar becomes a fixed bottom tab bar */
+    .left-sidebar {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+        border-right: none;
+        border-top: 1px solid var(--color-border);
+        background-color: var(--primary-bg-color);
+        z-index: 100;
+    }
+
+    /* No room for these in a bottom bar; Post still works via the compose box in the feed */
+    .nav-logo,
+    .tweet-button,
+    .user-mini {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        flex: 1;
+        gap: 4px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-link {
+        flex-shrink: 0;
+    }
+
+    .dark-mode-switch,
+    .logout-btn {
+        flex-shrink: 0;
+    }
+
+    .dark-mode-switch {
+        transform: scale(0.75);
+    }
+
+    /* Scrollable tabs instead of squeezed/wrapped text */
+    .tab-bar {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .tab-bar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-bar-item {
+        flex: 0 0 auto;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .compose-input {
+        font-size: 17px;
+    }
+
+    a,
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .compose-box {
+        padding: 12px;
+    }
+
+    .tweet {
+        padding: 12px;
+    }
+
+    .notification {
+        padding: 10px 12px;
+    }
+
+    .notifications-page-header {
+        padding: 10px 12px;
+    }
+}
